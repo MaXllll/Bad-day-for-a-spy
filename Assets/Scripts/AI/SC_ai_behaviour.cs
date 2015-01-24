@@ -51,8 +51,6 @@ public class SC_ai_behaviour : MonoBehaviour {
 
 	void Update()
 	{
-		//Debug.Log(_current_state);
-
 		switch (_current_state)
 		{
 		case AIState.Wait:

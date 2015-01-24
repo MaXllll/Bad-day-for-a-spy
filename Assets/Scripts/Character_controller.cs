@@ -45,7 +45,7 @@ public class Character_controller : MonoBehaviour
 				}
 				input = input.normalized;
 				velocity = Vector3.MoveTowards (velocity, input * maxSpeed, acceleration * Time.deltaTime);
-				controller.Move (velocity);
+				controller.Move (velocity * Time.deltaTime);
 				if (velocity != Vector3.zero) {
 						transform.rotation = Quaternion.LookRotation (-velocity);
 						anim.SetBool ("Walk", true);
