@@ -19,6 +19,7 @@ public class Character_controller : MonoBehaviour
 		private Animator
 				anim;
 		private Vector3 velocity = Vector3.zero;
+	
 
 
 		// Use this for initialization
@@ -30,6 +31,7 @@ public class Character_controller : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
+				float run = 0;
 				Vector3 input = Vector3.zero;
 				if (Input.GetKey (KeyCode.Z)) {
 						input.z += 1;
@@ -43,6 +45,8 @@ public class Character_controller : MonoBehaviour
 				if (Input.GetKey (KeyCode.D)) {
 						input.x += 1;
 				}
+
+						
 				input = input.normalized;
 				velocity = Vector3.MoveTowards (velocity, input * maxSpeed, acceleration * Time.deltaTime);
 				controller.Move (velocity * Time.deltaTime);

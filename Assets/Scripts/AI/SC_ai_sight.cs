@@ -27,6 +27,7 @@ public class SC_ai_sight : MonoBehaviour {
 	void OnTriggerStay(Collider collider)
 	{
 		Vector3 V3_collider_direction = collider.transform.position - _T_trigger.position;
+
 		if (Vector3.Angle(_T_trigger.forward, V3_collider_direction) < _f_sight_angle * 0.5f)
 		{
 			RaycastHit _hit;
