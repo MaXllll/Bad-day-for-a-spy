@@ -14,7 +14,7 @@ public class Character_controller : MonoBehaviour
 				acceleration;
 		[SerializeField]
 		private Transform
-				transform;
+				character_transform;
 		[SerializeField]
 		private Animator
 				anim;
