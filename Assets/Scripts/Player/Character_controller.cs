@@ -31,7 +31,6 @@ public class Character_controller : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				float run = 0;
 				Vector3 input = Vector3.zero;
 				if (Input.GetKey (KeyCode.Z)) {
 						input.z += 1;
