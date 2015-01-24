@@ -10,16 +10,21 @@ public class SC_fart : MonoBehaviour {
 	[SerializeField]
 	private Transform[] _T_farts_ring_2;
 	[SerializeField]
+	private GameObject _GO_trigger_0;
+	[SerializeField]
+	private GameObject _GO_trigger_1;
+	[SerializeField]
+	private GameObject _GO_trigger_2;
+	[SerializeField]
 	private LayerMask _layer_mask;
-
-
-	void Start()
-	{
-		StartCoroutine(Fart(2, 10));
-	}
 	
+
 	public IEnumerator Fart(int i_size, float f_duration)
 	{
+		_GO_trigger_0.SetActive(true);
+		_GO_trigger_1.SetActive(false);
+		_GO_trigger_2.SetActive(false);
+
 		Material Mat_fart;
 		Mat_fart = _T_farts_center[0].renderer.material;
 		for (int i = 1; i < _T_farts_center.Length; ++i)
@@ -33,6 +38,9 @@ public class SC_fart : MonoBehaviour {
 
 		if (i_size > 0)
 		{
+			_GO_trigger_0.SetActive(false);
+			_GO_trigger_1.SetActive(true);
+
 			Mat_fart = _T_farts_ring_1[0].renderer.material;
 			for (int i = 1; i < _T_farts_ring_1.Length; ++i)
 			{
@@ -46,6 +54,9 @@ public class SC_fart : MonoBehaviour {
 
 		if (i_size > 1)
 		{
+			_GO_trigger_1.SetActive(false);
+			_GO_trigger_2.SetActive(true);
+
 			Mat_fart = _T_farts_ring_2[0].renderer.material;
 			for (int i = 1; i < _T_farts_ring_2.Length; ++i)
 			{
