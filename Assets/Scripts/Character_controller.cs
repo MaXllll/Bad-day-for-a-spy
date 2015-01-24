@@ -52,7 +52,5 @@ public class Character_controller : MonoBehaviour
 				} else {
 						anim.SetBool ("Walk", false);
 				}
-
-				Debug.Log (Input.GetAxis ("Horizontal"));
 		}
 }
