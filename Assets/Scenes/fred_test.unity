@@ -318,6 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _patrol_way: {fileID: 2105303501}
+  _ai_sight: {fileID: 1795688822}
   _f_wait_rotation_speed: 10
   _f_wait_angle_offset_max: 30
 --- !u!114 &457081061
@@ -612,7 +613,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 26bb4f469f1c0f340824488ab4e97977, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1524,6 +1525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af77a59081697dd48959814b8dcf4d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ai_behaviour: {fileID: 457081060}
   _f_sight_distance: 10
   _f_sight_angle: 90
 --- !u!135 &1795688823

@@ -4,19 +4,23 @@ using System.Collections;
 public class SC_ai_sight : MonoBehaviour {
 
 	[SerializeField]
+	private SC_ai_behaviour _ai_behaviour;
+	[SerializeField]
 	private float _f_sight_distance = 10;
 	[SerializeField]
 	private float _f_sight_angle = 90;
 
 	private Transform _T_trigger;
 
-	public Transform _T_in_sight {set; private get;}
+	public bool _b_player_is_in_sight {get; private set;}
+	public Vector3 _V3_last_player_position_in_sight {get; private set;}
 
 
 	void Start()
 	{
 		GetComponent<SphereCollider>().radius = _f_sight_distance;
 		_T_trigger = transform;
+		_b_player_is_in_sight = false;
 	}
 
 
@@ -30,16 +34,20 @@ public class SC_ai_sight : MonoBehaviour {
 			{
 				if (_hit.collider == collider)
 				{
-					Debug.Log("Player spotted !!!");
-					_T_in_sight = collider.transform;
+					if (!_b_player_is_in_sight)
+						_ai_behaviour.SetChase();
+					_b_player_is_in_sight = true;
+					_V3_last_player_position_in_sight = _hit.transform.position;
+					return;
 				}
 			}
 		}
+		_b_player_is_in_sight = false;
 	}
 
 
 	void OnTriggerExit(Collider collider)
 	{
-		_T_in_sight = null;
+		_b_player_is_in_sight = false;
 	}
 }

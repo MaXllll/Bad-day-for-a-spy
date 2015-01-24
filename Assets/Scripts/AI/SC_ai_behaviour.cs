@@ -7,8 +7,10 @@ public class SC_ai_behaviour : MonoBehaviour {
 	private NavMeshAgent _nav_mesh_agent;
 	[SerializeField]
 	private SC_patrol_way _patrol_way;
+	[SerializeField]
+	private SC_ai_sight _ai_sight;
 
-	public enum AIState {Wait, Patrol, GoCheck, LookAround, ReturnToPosition}
+	public enum AIState {Wait, Patrol, GoCheck, LookAround, ReturnToPosition, Chase}
 	private AIState _current_state = AIState.Wait;
 
 	private Vector3 _V3_start_position;
@@ -89,7 +91,7 @@ public class SC_ai_behaviour : MonoBehaviour {
 
 		case AIState.LookAround:
 			_f_angle_look_around += Time.deltaTime * 90;
-			_T_ai.eulerAngles = _V3_start_euler_angle + Vector3.up * _f_angle_look_around;
+			_T_ai.eulerAngles = _V3_start_angle_look_around + Vector3.up * _f_angle_look_around;
 			if (_f_angle_look_around > 360)
 				SetReturnToPosition();
 			break;
@@ -97,6 +99,18 @@ public class SC_ai_behaviour : MonoBehaviour {
 		case AIState.ReturnToPosition:
 			if (Vector2.Distance(new Vector2(_T_ai.position.x, _T_ai.position.z), new Vector2(_nav_mesh_agent.destination.x, _nav_mesh_agent.destination.z)) < 0.25f)
 				SetWait();
+			break;
+
+		case AIState.Chase:
+			if (_ai_sight._b_player_is_in_sight)
+			{
+				_nav_mesh_agent.destination = _ai_sight._V3_last_player_position_in_sight;
+				if (Vector2.Distance(new Vector2(_T_ai.position.x, _T_ai.position.z), new Vector2(_nav_mesh_agent.destination.x, _nav_mesh_agent.destination.z)) < 1.25f)
+
+					Debug.Log("PLAYER CAUGHT !!!!");
+			}
+			else
+				SetCheck(_nav_mesh_agent.destination = _ai_sight._V3_last_player_position_in_sight);
 			break;
 		}
 	}
@@ -146,5 +160,10 @@ public class SC_ai_behaviour : MonoBehaviour {
 		{
 			SetPatrol();
 		}
+	}
+
+	public void SetChase()
+	{
+		_current_state = AIState.Chase;
 	}
 }
