@@ -9,9 +9,16 @@ public class SC_ai_behaviour : MonoBehaviour {
 	private SC_patrol_way _patrol_way;
 	[SerializeField]
 	private SC_ai_sight _ai_sight;
+	[SerializeField]
+	private Animator _animator;
 
 	public enum AIState {Wait, Patrol, GoCheck, LookAround, ReturnToPosition, Chase}
-	private AIState _current_state = AIState.Wait;
+	public AIState _current_state {get; private set;}
+
+	[SerializeField]
+	private float _f_walk_speed = 2.5f;
+	[SerializeField]
+	private float _f_run_speed = 6f;
 
 	private Vector3 _V3_start_position;
 	private Vector3 _V3_start_euler_angle;
@@ -46,6 +53,10 @@ public class SC_ai_behaviour : MonoBehaviour {
 			_V3_current_way_point = _patrol_way.GetWayPoint(_i_current_way_point);
 			SetPatrol();
 		}
+		else
+			SetWait();
+
+		_nav_mesh_agent.speed = _f_walk_speed;
 	}
 
 
@@ -54,7 +65,6 @@ public class SC_ai_behaviour : MonoBehaviour {
 		switch (_current_state)
 		{
 		case AIState.Wait:
-			// Tourne Legerment
 			if (_b_wait_rotation_direction)
 			{
 				_f_wait_current_angle_offset += _f_wait_rotation_speed * Time.deltaTime;
@@ -111,6 +121,11 @@ public class SC_ai_behaviour : MonoBehaviour {
 				SetCheck(_nav_mesh_agent.destination = _ai_sight._V3_last_player_position_in_sight);
 			break;
 		}
+
+		if (_nav_mesh_agent.velocity != Vector3.zero)
+			_animator.SetBool ("Walk", true);
+		else
+			_animator.SetBool ("Walk", false);
 	}
 
 
@@ -124,6 +139,7 @@ public class SC_ai_behaviour : MonoBehaviour {
 	{
 		_current_state = AIState.Patrol;
 		_nav_mesh_agent.destination = _V3_current_way_point;
+		_nav_mesh_agent.speed = _f_walk_speed;
 	}
 
 	private void NextWayPoint()
@@ -151,6 +167,7 @@ public class SC_ai_behaviour : MonoBehaviour {
 	{
 		if (_patrol_way == null)
 		{
+			_nav_mesh_agent.speed = _f_walk_speed;
 			_current_state = AIState.ReturnToPosition;
 			_nav_mesh_agent.destination = _V3_start_position;
 		}
@@ -163,5 +180,6 @@ public class SC_ai_behaviour : MonoBehaviour {
 	public void SetChase()
 	{
 		_current_state = AIState.Chase;
+		_nav_mesh_agent.speed = _f_run_speed;
 	}
 }

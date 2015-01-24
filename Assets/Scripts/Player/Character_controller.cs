@@ -19,6 +19,7 @@ public class Character_controller : MonoBehaviour
 		private Animator
 				anim;
 		private Vector3 velocity = Vector3.zero;
+	
 
 
 		// Use this for initialization
@@ -43,6 +44,8 @@ public class Character_controller : MonoBehaviour
 				if (Input.GetKey (KeyCode.D)) {
 						input.x += 1;
 				}
+
+						
 				input = input.normalized;
 				velocity = Vector3.MoveTowards (velocity, input * maxSpeed, acceleration * Time.deltaTime);
 				controller.Move (velocity * Time.deltaTime);
