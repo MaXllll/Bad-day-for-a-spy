@@ -41507,11 +41507,11 @@ Prefab:
     - target: {fileID: 11400000, guid: c5eb3dc29f3a44939b19e06e587d4da2, type: 2}
       propertyPath: sneaky_fart
       value: 
-      objectReference: {fileID: 8300000, guid: 2021e2d4e5b7541a28392ccfdafa14ba, type: 3}
+      objectReference: {fileID: 8300000, guid: b83b3d3dbbb354487bf71fc960a4ce03, type: 3}
     - target: {fileID: 11400000, guid: c5eb3dc29f3a44939b19e06e587d4da2, type: 2}
       propertyPath: long_fart
       value: 
-      objectReference: {fileID: 8300000, guid: 84678657d902f4ac6bb1b4e938535dd1, type: 3}
+      objectReference: {fileID: 8300000, guid: 5122dd9dcb29f49f5aae8eb9f988fc0d, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5eb3dc29f3a44939b19e06e587d4da2, type: 2}
   m_RootGameObject: {fileID: 2038532158}
@@ -50289,8 +50289,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   short_fart_1: {fileID: 8300000, guid: fa92e845695ba4baaa6614bf18e7e6e0, type: 3}
-  long_fart: {fileID: 8300000, guid: 84678657d902f4ac6bb1b4e938535dd1, type: 3}
-  sneaky_fart: {fileID: 8300000, guid: 2021e2d4e5b7541a28392ccfdafa14ba, type: 3}
+  long_fart: {fileID: 8300000, guid: 5122dd9dcb29f49f5aae8eb9f988fc0d, type: 3}
+  sneaky_fart: {fileID: 8300000, guid: b83b3d3dbbb354487bf71fc960a4ce03, type: 3}
   walls_layer:
     serializedVersion: 2
     m_Bits: 1024
