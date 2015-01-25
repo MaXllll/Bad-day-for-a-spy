@@ -20,13 +20,13 @@ public class SC_GaugeManager : MonoBehaviour {
 	private float f_inc_stress = 0.3f;
 	private float f_dec_stress = 0.6f;
 	private float f_inc_fart = 0.05f;
-	private int i_max = 120;
+	private int i_max = 100;
 	private int i_min = 10;
 
 
 	// Use this for initialization
 	void Start ()  {
-		InvokeRepeating("CalculateFart",1,2);
+		InvokeRepeating("CalculateFart",1,2.2f);
 	}
 	
 	// Update is called once per frame
@@ -55,10 +55,15 @@ public class SC_GaugeManager : MonoBehaviour {
 	public void ChangeFartValue(){
 		if (!b_isInShadow && f_fartProbability < i_max) {
 			f_fartProbability += f_inc_fart;
-			f_fartProbability += f_stressValue/1000;
-			if(f_fartProbability > i_max) f_fartProbability = i_max;
-			img_fartBar.rectTransform.sizeDelta = new Vector2(img_fartBar.rectTransform.rect.width,f_fartProbability);
-		} /*else if(b_isInShadow && f_fartProbability > 0){
+			f_fartProbability += f_stressValue / 500;
+			if (f_fartProbability > i_max)
+					f_fartProbability = i_max;
+			img_fartBar.rectTransform.sizeDelta = new Vector2 (img_fartBar.rectTransform.rect.width, f_fartProbability);
+		} else {
+			f_fartProbability += f_inc_fart;			
+			img_fartBar.rectTransform.sizeDelta = new Vector2 (img_fartBar.rectTransform.rect.width, f_fartProbability);
+		}
+		/*else if(b_isInShadow && f_fartProbability > 0){
 			f_fartProbability -= f_dec_stress;
 			if(f_fartProbability < 0) f_fartProbability = 0;
 			img_fartBar.rectTransform.sizeDelta = new Vector2(img_fartBar.rectTransform.rect.width,f_fartProbability);
@@ -71,7 +76,16 @@ public class SC_GaugeManager : MonoBehaviour {
 		float dice_roll = Random.value * 100;
 		Debug.Log (dice_roll);
 		if ( f_fartProbability > 25 && dice_roll < f_fartProbability) {
-			player.GetComponent<Fart_manager>().fart(10,3,1);
+			if(f_fartProbability < 50){
+				player.GetComponent<Fart_manager>().fart(0,3,1);
+			}else if(f_fartProbability < 75){				
+				player.GetComponent<Fart_manager>().fart(10,3,1);
+			}else if(f_fartProbability < 100){
+				if(dice_roll > 97){
+					player.GetComponent<Fart_manager>().fart_long(7,2,0);					
+				}
+				player.GetComponent<Fart_manager>().fart(10,3,2);
+			}
 			f_fartProbability = 0;
 			img_fartBar.rectTransform.sizeDelta = new Vector2(img_fartBar.rectTransform.rect.width,f_fartProbability);
 		}
