@@ -11,6 +11,7 @@ GameObject:
   - 143: {fileID: 14385296}
   - 114: {fileID: 11485296}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -42,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .550000012, y: .200000003, z: -24.3400002}
+  m_LocalPosition: {x: 7.69999981, y: .5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 485296}
@@ -91,11 +92,27 @@ MonoBehaviour:
   guards_layer:
     serializedVersion: 2
     m_Bits: 512
-  short_fart: {fileID: 8300000, guid: fa92e845695ba4baaa6614bf18e7e6e0, type: 3}
+  short_fart_1: {fileID: 8300000, guid: fa92e845695ba4baaa6614bf18e7e6e0, type: 3}
+  short_fart_2: {fileID: 8300000, guid: 9b026f74a363e3e49b94d7c5310fb07e, type: 3}
+  short_fart_3: {fileID: 8300000, guid: 575ed61b262a50740b2b2d90d5f7cbeb, type: 3}
   long_fart: {fileID: 8300000, guid: 71c2b36ecb39149aba18b134ebfa3079, type: 3}
   walls_layer:
     serializedVersion: 2
     m_Bits: 1024
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90054464dcf7afd43941aeefc52a9ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  img_stressBar: {fileID: 0}
+  img_fartBar: {fileID: 0}
+  player: {fileID: 185294}
 --- !u!114 &11485296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,8 +127,8 @@ MonoBehaviour:
   controller: {fileID: 14385296}
   maxSpeed: 5
   acceleration: 20
-  character_transform: {fileID: 0}
   anim: {fileID: 9585296}
+  start_position: {fileID: 0}
 --- !u!143 &14385296
 CharacterController:
   m_ObjectHideFlags: 1
@@ -145,7 +162,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300004, guid: b2b6ae4a01d0e4b6d8e12534ef1f696b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
