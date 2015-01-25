@@ -447,6 +447,9 @@ MonoBehaviour:
   _ai_behaviour: {fileID: 827619212}
   _f_sight_distance: 10
   _f_sight_angle: 120
+  _layer_mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &60510135
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -988,7 +991,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 119818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_Name
@@ -1053,7 +1056,7 @@ Transform:
   - {fileID: 601646029}
   - {fileID: 1893905380}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!1 &169523917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,7 +1238,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 119818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_Name
@@ -2539,6 +2542,9 @@ MonoBehaviour:
   _ai_behaviour: {fileID: 839794096}
   _f_sight_distance: 10
   _f_sight_angle: 120
+  _layer_mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &401641988
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2753,7 +2759,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 119818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_Name
@@ -3001,7 +3007,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: _patrol_way
@@ -3065,6 +3071,9 @@ MonoBehaviour:
   _ai_behaviour: {fileID: 1178395913}
   _f_sight_distance: 10
   _f_sight_angle: 120
+  _layer_mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &530949902
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4091,6 +4100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _patrol_way: {fileID: 0}
   _ai_sight: {fileID: 931498067}
+  _animator: {fileID: 2043514738}
+  _f_walk_speed: 2.5
+  _f_run_speed: 6
   _f_wait_rotation_speed: 10
   _f_wait_angle_offset_max: 30
 --- !u!195 &693980557
@@ -4102,7 +4114,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 693980555}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 6
+  m_Speed: 2.5
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 180
@@ -4156,7 +4168,7 @@ Transform:
   - {fileID: 931498068}
   - {fileID: 2043514737}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &699361695
 GameObject:
   m_ObjectHideFlags: 0
@@ -4750,6 +4762,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _patrol_way: {fileID: 590256143}
   _ai_sight: {fileID: 60510134}
+  _animator: {fileID: 583926667}
+  _f_walk_speed: 2.5
+  _f_run_speed: 6
   _f_wait_rotation_speed: 10
   _f_wait_angle_offset_max: 30
 --- !u!4 &827619213
@@ -4765,7 +4780,7 @@ Transform:
   - {fileID: 60510137}
   - {fileID: 583926666}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
 --- !u!195 &827619214
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4775,7 +4790,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 827619211}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 6
+  m_Speed: 2.5
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 180
@@ -4849,6 +4864,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _patrol_way: {fileID: 0}
   _ai_sight: {fileID: 401641987}
+  _animator: {fileID: 1825434223}
+  _f_walk_speed: 2.5
+  _f_run_speed: 6
   _f_wait_rotation_speed: 10
   _f_wait_angle_offset_max: 30
 --- !u!4 &839794097
@@ -4864,7 +4882,7 @@ Transform:
   - {fileID: 401641990}
   - {fileID: 1825434222}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!195 &839794098
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4874,7 +4892,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 839794095}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 6
+  m_Speed: 2.5
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 180
@@ -5303,6 +5321,9 @@ MonoBehaviour:
   _ai_behaviour: {fileID: 693980556}
   _f_sight_distance: 10
   _f_sight_angle: 120
+  _layer_mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &931498068
 Transform:
   m_ObjectHideFlags: 0
@@ -5536,7 +5557,7 @@ Transform:
   - {fileID: 1435310678}
   - {fileID: 368408760}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &995349575
 GameObject:
   m_ObjectHideFlags: 0
@@ -5570,6 +5591,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _patrol_way: {fileID: 2129280412}
   _ai_sight: {fileID: 1182313459}
+  _animator: {fileID: 1496942700}
+  _f_walk_speed: 2.5
+  _f_run_speed: 6
   _f_wait_rotation_speed: 10
   _f_wait_angle_offset_max: 30
 --- !u!4 &995349577
@@ -5585,7 +5609,7 @@ Transform:
   - {fileID: 1182313462}
   - {fileID: 1496942699}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!195 &995349578
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5595,7 +5619,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 995349575}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 6
+  m_Speed: 2.5
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 180
@@ -5857,6 +5881,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _patrol_way: {fileID: 541035917}
   _ai_sight: {fileID: 1615831827}
+  _animator: {fileID: 2035480824}
+  _f_walk_speed: 2.5
+  _f_run_speed: 6
   _f_wait_rotation_speed: 10
   _f_wait_angle_offset_max: 30
 --- !u!4 &1031138822
@@ -5882,7 +5909,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1031138820}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 6
+  m_Speed: 2.5
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 180
@@ -6012,6 +6039,9 @@ MonoBehaviour:
   _ai_behaviour: {fileID: 1549861657}
   _f_sight_distance: 10
   _f_sight_angle: 120
+  _layer_mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &1054410834
 Transform:
   m_ObjectHideFlags: 0
@@ -6711,7 +6741,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
@@ -6901,7 +6931,7 @@ Transform:
   - {fileID: 530949900}
   - {fileID: 1624785091}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
 --- !u!114 &1178395913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6916,6 +6946,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _patrol_way: {fileID: 590256143}
   _ai_sight: {fileID: 530949901}
+  _animator: {fileID: 1624785089}
+  _f_walk_speed: 2.5
+  _f_run_speed: 6
   _f_wait_rotation_speed: 10
   _f_wait_angle_offset_max: 30
 --- !u!195 &1178395914
@@ -6927,7 +6960,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1178395911}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 6
+  m_Speed: 2.5
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 180
@@ -7001,6 +7034,9 @@ MonoBehaviour:
   _ai_behaviour: {fileID: 995349576}
   _f_sight_distance: 6
   _f_sight_angle: 120
+  _layer_mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &1182313460
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7249,6 +7285,9 @@ MonoBehaviour:
   _ai_behaviour: {fileID: 1460976049}
   _f_sight_distance: 6
   _f_sight_angle: 120
+  _layer_mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &1214868555
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7490,6 +7529,9 @@ MonoBehaviour:
   _ai_behaviour: {fileID: 1951406330}
   _f_sight_distance: 10
   _f_sight_angle: 120
+  _layer_mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &1251315941
 Transform:
   m_ObjectHideFlags: 0
@@ -7947,7 +7989,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: _patrol_way
@@ -8288,7 +8330,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 15
 --- !u!1 &1354041216
 GameObject:
   m_ObjectHideFlags: 0
@@ -8977,6 +9019,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _patrol_way: {fileID: 968571646}
   _ai_sight: {fileID: 1214868554}
+  _animator: {fileID: 1808813029}
+  _f_walk_speed: 2.5
+  _f_run_speed: 6
   _f_wait_rotation_speed: 10
   _f_wait_angle_offset_max: 30
 --- !u!4 &1460976050
@@ -8992,7 +9037,7 @@ Transform:
   - {fileID: 1214868557}
   - {fileID: 1808813028}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!195 &1460976051
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9002,7 +9047,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1460976048}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 6
+  m_Speed: 2.5
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 180
@@ -9558,7 +9603,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 119818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_Name
@@ -9705,6 +9750,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _patrol_way: {fileID: 590256143}
   _ai_sight: {fileID: 1054410833}
+  _animator: {fileID: 510226108}
+  _f_walk_speed: 2.5
+  _f_run_speed: 6
   _f_wait_rotation_speed: 10
   _f_wait_angle_offset_max: 30
 --- !u!195 &1549861658
@@ -9716,7 +9764,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1549861656}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 6
+  m_Speed: 2.5
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 180
@@ -9770,7 +9818,7 @@ Transform:
   - {fileID: 1054410834}
   - {fileID: 510226107}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!1 &1553330342
 GameObject:
   m_ObjectHideFlags: 0
@@ -9855,7 +9903,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &1553330348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10073,6 +10121,9 @@ MonoBehaviour:
   _ai_behaviour: {fileID: 1031138821}
   _f_sight_distance: 10
   _f_sight_angle: 120
+  _layer_mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &1615831828
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10754,7 +10805,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 119818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_Name
@@ -11389,7 +11440,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 119818, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
       propertyPath: m_Name
@@ -12019,6 +12070,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _patrol_way: {fileID: 162867008}
   _ai_sight: {fileID: 1251315940}
+  _animator: {fileID: 388498790}
+  _f_walk_speed: 2.5
+  _f_run_speed: 6
   _f_wait_rotation_speed: 10
   _f_wait_angle_offset_max: 30
 --- !u!195 &1951406331
@@ -12030,7 +12084,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1951406329}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 6
+  m_Speed: 2.5
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 180
@@ -12258,7 +12312,7 @@ Transform:
   m_Children:
   - {fileID: 1501282618}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!114 &2002181190
 MonoBehaviour:
   m_ObjectHideFlags: 0
