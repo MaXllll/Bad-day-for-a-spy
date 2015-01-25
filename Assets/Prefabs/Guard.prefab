@@ -193,7 +193,7 @@ MonoBehaviour:
   _ai_sight: {fileID: 11400002}
   _animator: {fileID: 9519818}
   _f_walk_speed: 2.5
-  _f_run_speed: 6
+  _f_run_speed: 5.75
   _f_wait_rotation_speed: 10
   _f_wait_angle_offset_max: 30
 --- !u!114 &11400002
