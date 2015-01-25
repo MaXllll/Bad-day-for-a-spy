@@ -97,9 +97,7 @@ public class SC_ai_behaviour : MonoBehaviour {
 
 		case AIState.GoCheck:
 			_f_go_check_current_time += Time.deltaTime;
-			if (_f_go_check_current_time > _f_go_check_time_limit)
-				SetReturnToPosition();
-			if (Vector2.Distance(new Vector2(_T_ai.position.x, _T_ai.position.z), new Vector2(_nav_mesh_agent.destination.x, _nav_mesh_agent.destination.z)) < 1.25f)
+			if (_f_go_check_current_time > _f_go_check_time_limit || Vector2.Distance(new Vector2(_T_ai.position.x, _T_ai.position.z), new Vector2(_nav_mesh_agent.destination.x, _nav_mesh_agent.destination.z)) < 1.25f)
 				SetLookAround();
 			break;
 
