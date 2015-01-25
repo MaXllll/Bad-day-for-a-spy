@@ -41096,6 +41096,10 @@ Prefab:
       propertyPath: img_fartBar
       value: 
       objectReference: {fileID: 556978812}
+    - target: {fileID: 11400000, guid: c5eb3dc29f3a44939b19e06e587d4da2, type: 2}
+      propertyPath: step_fart_long
+      value: .349999994
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5eb3dc29f3a44939b19e06e587d4da2, type: 2}
   m_RootGameObject: {fileID: 2038532158}
@@ -49684,7 +49688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fart_prefab: {fileID: 100038, guid: fddb6e5fb3dae1f46b08bc5e3a805891, type: 2}
-  step_fart_long: .5
+  step_fart_long: .349999994
   guards_layer:
     serializedVersion: 2
     m_Bits: 512

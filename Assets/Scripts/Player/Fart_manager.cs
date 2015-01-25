@@ -8,19 +8,13 @@ public class Fart_manager : MonoBehaviour
 				fart_prefab;
 		[SerializeField]
 		private float
-				step_fart_long = 0.50f;
+				step_fart_long = 0.35f;
 		[SerializeField]
 		private LayerMask
 				guards_layer;
 		[SerializeField]
 		private AudioClip
 				short_fart_1;
-		[SerializeField]
-		private AudioClip
-				short_fart_2;
-		[SerializeField]
-		private AudioClip
-				short_fart_3;
 		[SerializeField]
 		private AudioClip
 				long_fart;
@@ -41,22 +35,10 @@ public class Fart_manager : MonoBehaviour
 		public void fart (int loud_level, int duration, int volume)
 		{
 				if (loud_level != 0) {
-						switch (Random.Range (0, 2)) {
-						case 0:
-								Sound (loud_level, short_fart_1);
-								break;
-						case 1:
-								Sound (loud_level, short_fart_2);
-								break;
-						case 2:
-								Sound (loud_level, short_fart_3);
-								break;
-						default :
-								Sound (loud_level, short_fart_1);
-								break;
+						Sound (loud_level, short_fart_1);
 
-						}
 				}
+				
 				GameObject go = (GameObject)Instantiate (fart_prefab, transform.position, Quaternion.identity);
 				SC_fart sc_fart = go.GetComponent<SC_fart> ();
 				sc_fart.StartCoroutine (sc_fart.Fart (volume, duration));
@@ -64,6 +46,7 @@ public class Fart_manager : MonoBehaviour
 
 		private IEnumerator fart_long_co (int loud_level, int duration, int volume)
 		{	
+				Debug.Log ("fart_long_co");
 				float time = 0f;
 				if (loud_level != 0) {
 						Sound (loud_level, long_fart);
@@ -81,7 +64,8 @@ public class Fart_manager : MonoBehaviour
 
 		public void fart_long (int loud_level, int duration, int volume)
 		{
-				StartCoroutine (fart_long_co (7, 2, 0));
+				Debug.Log ("fart_long");
+				StartCoroutine (fart_long_co (loud_level, duration, volume));
 		}
 
 		private void Sound (int loud_level, AudioClip clip)

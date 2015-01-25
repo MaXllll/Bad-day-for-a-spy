@@ -86,14 +86,14 @@ public class SC_GaugeManager : MonoBehaviour
 				Debug.Log (dice_roll);
 				if (f_fartProbability > 35 && dice_roll < f_fartProbability) {
 						if (f_fartProbability < 50) {
-								player.GetComponent<Fart_manager> ().fart(0, 3, 0);
+								player.GetComponent<Fart_manager> ().fart (0, 3, 0);
 						} else if (f_fartProbability < 75) {
-								player.GetComponent<Fart_manager> ().fart(10, 3, 1);
-						} else if (f_fartProbability < 100) {
-								if (dice_roll > 97) {
-										player.GetComponent<Fart_manager> ().fart_long(7, 2, 0);					
+								player.GetComponent<Fart_manager> ().fart (10, 3, 1);
+						} else if (f_fartProbability <= 100) {
+								if (dice_roll > 75) {
+										player.GetComponent<Fart_manager> ().fart_long (7, 3, 0);					
 								} else {
-										player.GetComponent<Fart_manager> ().fart(10, 6, 2);
+										player.GetComponent<Fart_manager> ().fart (10, 6, 2);
 								}
 						}
 						f_fartProbability = 0;
