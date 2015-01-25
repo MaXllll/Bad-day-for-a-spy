@@ -3228,6 +3228,7 @@ GameObject:
   - 4: {fileID: 1727734110}
   - 143: {fileID: 1727734109}
   - 114: {fileID: 1727734108}
+  - 114: {fileID: 1727734111}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -3280,6 +3281,24 @@ Transform:
   - {fileID: 1727571902}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1727734111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727734107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c590898a4fa714d2f954c6b7a0364c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fart_prefab: {fileID: 100038, guid: fddb6e5fb3dae1f46b08bc5e3a805891, type: 2}
+  step_fart_long: .5
+  guards_layer:
+    serializedVersion: 2
+    m_Bits: 512
+  short_fart: {fileID: 8300000, guid: fa92e845695ba4baaa6614bf18e7e6e0, type: 3}
+  long_fart: {fileID: 8300000, guid: 71c2b36ecb39149aba18b134ebfa3079, type: 3}
 --- !u!1 &1795688821
 GameObject:
   m_ObjectHideFlags: 0
