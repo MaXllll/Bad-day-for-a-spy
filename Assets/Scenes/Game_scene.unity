@@ -390,7 +390,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: .292737454, g: .292737454, b: .292737454, a: .0199999996}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 98556529}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -806,7 +806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 1360746228}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -1283,7 +1283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 450377322}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -2384,7 +2384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 700243527}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -3711,7 +3711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 836695789}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -4665,7 +4665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 336531191}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -7593,7 +7593,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 269772797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.42999983, y: 0, z: -1.96000004}
+  m_LocalPosition: {x: .870000005, y: 0, z: 8.64000034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 964800727}
@@ -7642,7 +7642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 992938790}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -9756,7 +9756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 1892361778}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -13151,7 +13151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 1663195796}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -16638,7 +16638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 361697932}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -25841,7 +25841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 1378165208}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -26787,7 +26787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 555789484}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -27203,7 +27203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 585325825}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -27387,7 +27387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 107018504}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -28237,7 +28237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 1835227262}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -28401,7 +28401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 931236316}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -31575,7 +31575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 903651730}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -32777,7 +32777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 982611180}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -34287,7 +34287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 537628201}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -37309,7 +37309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 1838756478}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -40226,7 +40226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 1347345316}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -41928,6 +41928,14 @@ Prefab:
       propertyPath: long_fart
       value: 
       objectReference: {fileID: 8300000, guid: 5122dd9dcb29f49f5aae8eb9f988fc0d, type: 3}
+    - target: {fileID: 11400002, guid: c5eb3dc29f3a44939b19e06e587d4da2, type: 2}
+      propertyPath: f_inc_stress
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: c5eb3dc29f3a44939b19e06e587d4da2, type: 2}
+      propertyPath: f_inc_fart
+      value: .0599999987
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5eb3dc29f3a44939b19e06e587d4da2, type: 2}
   m_RootGameObject: {fileID: 2038532158}
@@ -41977,7 +41985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 1197822087}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -43094,7 +43102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 1005423531}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -43375,7 +43383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 478048804}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -46061,7 +46069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 532614832}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -49544,7 +49552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 1699325569}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -50687,6 +50695,8 @@ MonoBehaviour:
   img_stressBar: {fileID: 661006701}
   img_fartBar: {fileID: 556978812}
   player: {fileID: 2038532158}
+  f_inc_stress: .300000012
+  f_inc_fart: .0599999987
 --- !u!114 &2038532163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51422,7 +51432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 1231700303}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -51985,7 +51995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 812187884}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
@@ -52711,7 +52721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 507490181}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
