@@ -14,10 +14,10 @@ public class SC_GaugeManager : MonoBehaviour
 		[SerializeField]
 		public GameObject
 				player;
-		private float f_stressValue;
+		private float f_stressValue = 10;
 		private float f_fartProbability;
 		private int i_fartLevel;
-		private bool b_isInShadow = false;
+		private bool b_isInShadow = true;
 		private float f_inc_stress = 0.3f;
 		private float f_dec_stress = 0.6f;
 		private float f_inc_fart = 0.05f;
