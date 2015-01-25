@@ -12,11 +12,13 @@ public class SC_shadow : MonoBehaviour {
 	private void OnTriggerEnter(Collider collider)
 	{
 		_b_player_is_in_shadow = true;
-		//go_player.GetComponents('GaugeManager');
+		//go_player.GetComponents('GaugeManager');		
+		collider.GetComponent<SC_GaugeManager>().SetIsInShadow(true);
 	}
 
 	private void OnTriggerExit(Collider collider)
 	{
-		_b_player_is_in_shadow = false;
+		_b_player_is_in_shadow = false;		
+		collider.GetComponent<SC_GaugeManager>().SetIsInShadow(false);
 	}
 }
