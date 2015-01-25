@@ -35,16 +35,14 @@ public class Fart_manager : MonoBehaviour
 				}*/
 		}
 
-		public void fart (int loud_level, int duration, int volume, bool sneaky)
+		public void fart (int loud_level, int duration, int volume)
 		{
 				if (loud_level != 0) {
-						if (sneaky) {
-								Sound (loud_level, sneaky_fart);
-						} else {
-								Sound (loud_level, short_fart_1);
-						}
+						Sound (loud_level, short_fart_1);	
+				} else {
+						Sound (loud_level, sneaky_fart);
 				}
-				
+	
 				GameObject go = (GameObject)Instantiate (fart_prefab, transform.position, Quaternion.identity);
 				SC_fart sc_fart = go.GetComponent<SC_fart> ();
 				sc_fart.StartCoroutine (sc_fart.Fart (volume, duration));
