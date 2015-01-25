@@ -75,10 +75,10 @@ public class SC_GaugeManager : MonoBehaviour {
 	public void CalculateFart(){
 		float dice_roll = Random.value * 100;
 		Debug.Log (dice_roll);
-		if ( f_fartProbability > 25 && dice_roll < f_fartProbability) {
+		if ( f_fartProbability > 35 && dice_roll < f_fartProbability) {
 			if(f_fartProbability < 50){
 				player.GetComponent<Fart_manager>().fart(0,3,1);
-			}else if(f_fartProbability < 75){				
+			}else if(f_fartProbability < 75){
 				player.GetComponent<Fart_manager>().fart(10,3,1);
 			}else if(f_fartProbability < 100){
 				if(dice_roll > 97){

@@ -2915,13 +2915,13 @@ MonoBehaviour:
   guards_layer:
     serializedVersion: 2
     m_Bits: 512
-  short_fart_1: {fileID: 0}
-  short_fart_2: {fileID: 0}
-  short_fart_3: {fileID: 0}
+  short_fart_1: {fileID: 8300000, guid: fa92e845695ba4baaa6614bf18e7e6e0, type: 3}
+  short_fart_2: {fileID: 8300000, guid: fa92e845695ba4baaa6614bf18e7e6e0, type: 3}
+  short_fart_3: {fileID: 8300000, guid: 575ed61b262a50740b2b2d90d5f7cbeb, type: 3}
   long_fart: {fileID: 8300000, guid: 71c2b36ecb39149aba18b134ebfa3079, type: 3}
   walls_layer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 3072
 --- !u!114 &1727734113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3161,10 +3161,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 960344480}
   m_RootOrder: 3
-  m_AnchorMin: {x: .063000001, y: .0406199321}
-  m_AnchorMax: {x: .063000001, y: .0406199321}
+  m_AnchorMin: {x: .0747499913, y: .0263782404}
+  m_AnchorMax: {x: .0747499913, y: .0263782404}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_SizeDelta: {x: 28, y: 25}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1820021943
 MonoBehaviour:
@@ -3178,7 +3178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .807843149, g: .807843149, b: .0431372561, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 8e2103a61de71414b857ebda8e920831, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
