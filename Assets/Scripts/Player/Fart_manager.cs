@@ -65,13 +65,10 @@ public class Fart_manager : MonoBehaviour
 				AudioSource.PlayClipAtPoint (clip, Vector3.zero);
 
 				Collider[] proximity_guards = Physics.OverlapSphere (transform.position, loud_level, guards_layer);
-				Debug.Log (proximity_guards.Length);
 				for (int i= 0; i < proximity_guards.Length; ++i) {
 						Vector3 V3_collider_direction = proximity_guards [i].transform.position - transform.position;
-						Debug.Log (proximity_guards [i].transform.position + " - " + transform.position);
 						RaycastHit _hit;
 						if (!Physics.Raycast (transform.position, V3_collider_direction, out _hit, loud_level, walls_layer)) {
-								Debug.Log ("No wall");
 								proximity_guards [i].GetComponent<SC_ai_behaviour> ().SetCheck (transform.position);
 						}
 				}
