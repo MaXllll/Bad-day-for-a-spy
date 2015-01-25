@@ -89,7 +89,7 @@ public class SC_GaugeManager : MonoBehaviour
 						} else if (f_fartProbability < 75) {
 								player.GetComponent<Fart_manager> ().fart (10, 3, 1);
 						} else if (f_fartProbability <= 100) {
-								if (dice_roll > 75) {
+								if (dice_roll > 60) {
 										player.GetComponent<Fart_manager> ().fart_long (7, 3, 0);					
 								} else {
 										player.GetComponent<Fart_manager> ().fart (10, 6, 2);
