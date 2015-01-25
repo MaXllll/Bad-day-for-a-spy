@@ -36,7 +36,7 @@ public class SC_ai_behaviour : MonoBehaviour {
 	private Vector3 _V3_current_way_point;
 
 	// GoCheck variables
-	private float _f_go_check_time_limit = 3;
+	private float _f_go_check_time_limit = 5;
 	private float _f_go_check_current_time = 0;
 
 	// LookAround variables

@@ -64,7 +64,6 @@ public class Fart_manager : MonoBehaviour
 
 		private IEnumerator fart_long_co (int loud_level, int duration, int volume)
 		{	
-				Debug.Log ("BLAAZAZZAZAZ FART LONG");
 				float time = 0f;
 				if (loud_level != 0) {
 						Sound (loud_level, long_fart);
@@ -92,11 +91,11 @@ public class Fart_manager : MonoBehaviour
 
 				Collider[] proximity_guards = Physics.OverlapSphere (transform.position, loud_level, guards_layer);
 				for (int i= 0; i < proximity_guards.Length; ++i) {
-						Vector3 V3_collider_direction = proximity_guards [i].transform.position - transform.position;
-						RaycastHit _hit;
-						if (!Physics.Raycast (transform.position, V3_collider_direction, out _hit, loud_level, walls_layer)) {
-								proximity_guards [i].GetComponent<SC_ai_behaviour> ().SetCheck (transform.position);
-						}
+						//Vector3 V3_collider_direction = proximity_guards [i].transform.position - transform.position;
+						//RaycastHit _hit;
+						//if (!Physics.Raycast (transform.position, V3_collider_direction, out _hit, loud_level, walls_layer)) {
+						proximity_guards [i].GetComponent<SC_ai_behaviour> ().SetCheck (transform.position);
+						//}
 				}
 		}
 }
