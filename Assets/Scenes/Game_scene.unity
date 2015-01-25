@@ -8907,7 +8907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8b8586a327ad146bdd472acb378af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _patrol_way: {fileID: 0}
+  _patrol_way: {fileID: 1936466855}
   _ai_sight: {fileID: 156484473}
   _animator: {fileID: 1769786010}
   _f_walk_speed: 2.5
@@ -9829,6 +9829,10 @@ Prefab:
       propertyPath: m_Name
       value: Guard_P_1_4
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
+      propertyPath: _patrol_way
+      value: 
+      objectReference: {fileID: 1936466855}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 789085b2e38ae452cb28ebde2e4c6ad1, type: 2}
   m_RootGameObject: {fileID: 336531189}
@@ -49693,8 +49697,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   short_fart_1: {fileID: 8300000, guid: fa92e845695ba4baaa6614bf18e7e6e0, type: 3}
-  short_fart_2: {fileID: 8300000, guid: 9b026f74a363e3e49b94d7c5310fb07e, type: 3}
-  short_fart_3: {fileID: 8300000, guid: 575ed61b262a50740b2b2d90d5f7cbeb, type: 3}
   long_fart: {fileID: 8300000, guid: 71c2b36ecb39149aba18b134ebfa3079, type: 3}
   walls_layer:
     serializedVersion: 2
