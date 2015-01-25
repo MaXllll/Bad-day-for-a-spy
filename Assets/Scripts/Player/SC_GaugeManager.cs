@@ -68,7 +68,9 @@ public class SC_GaugeManager : MonoBehaviour
 								f_fartProbability = i_max;
 						img_fartBar.rectTransform.sizeDelta = new Vector2 (img_fartBar.rectTransform.rect.width, f_fartProbability);
 				} else {
-						f_fartProbability += f_inc_fart;			
+						f_fartProbability += f_inc_fart;
+						if (f_fartProbability > i_max)
+							f_fartProbability = i_max;
 						img_fartBar.rectTransform.sizeDelta = new Vector2 (img_fartBar.rectTransform.rect.width, f_fartProbability);
 				}
 				/*else if(b_isInShadow && f_fartProbability > 0){
