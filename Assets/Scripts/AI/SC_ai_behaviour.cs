@@ -35,6 +35,10 @@ public class SC_ai_behaviour : MonoBehaviour {
 	private int _i_current_way_point = 0;
 	private Vector3 _V3_current_way_point;
 
+	// GoCheck variables
+	private float _f_go_check_time_limit = 3;
+	private float _f_go_check_current_time = 0;
+
 	// LookAround variables
 	private Vector3 _V3_start_angle_look_around;
 	private float _f_angle_look_around;
@@ -92,6 +96,9 @@ public class SC_ai_behaviour : MonoBehaviour {
 			break;
 
 		case AIState.GoCheck:
+			_f_go_check_current_time += Time.deltaTime;
+			if (_f_go_check_current_time > _f_go_check_time_limit)
+				SetReturnToPosition();
 			if (Vector2.Distance(new Vector2(_T_ai.position.x, _T_ai.position.z), new Vector2(_nav_mesh_agent.destination.x, _nav_mesh_agent.destination.z)) < 1.25f)
 				SetLookAround();
 			break;
@@ -122,6 +129,7 @@ public class SC_ai_behaviour : MonoBehaviour {
 			{
 				_current_state = AIState.GoCheck;
 				_nav_mesh_agent.destination = _ai_sight._V3_last_player_position_in_sight;
+				_f_go_check_current_time = 0;
 			}
 			break;
 		}
@@ -156,8 +164,11 @@ public class SC_ai_behaviour : MonoBehaviour {
 	public void SetCheck(Vector3 V3_position_to_check)
 	{
 		if (_current_state != AIState.Chase)
-		_current_state = AIState.GoCheck;
-		_nav_mesh_agent.destination = V3_position_to_check;
+		{
+			_current_state = AIState.GoCheck;
+			_nav_mesh_agent.destination = V3_position_to_check;
+			_f_go_check_current_time = 0;
+		}
 	}
 
 	private void SetLookAround()
