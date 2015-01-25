@@ -2915,7 +2915,9 @@ MonoBehaviour:
   guards_layer:
     serializedVersion: 2
     m_Bits: 512
-  short_fart: {fileID: 8300000, guid: fa92e845695ba4baaa6614bf18e7e6e0, type: 3}
+  short_fart_1: {fileID: 0}
+  short_fart_2: {fileID: 0}
+  short_fart_3: {fileID: 0}
   long_fart: {fileID: 8300000, guid: 71c2b36ecb39149aba18b134ebfa3079, type: 3}
   walls_layer:
     serializedVersion: 2
@@ -2937,7 +2939,9 @@ MonoBehaviour:
   guards_layer:
     serializedVersion: 2
     m_Bits: 512
-  short_fart: {fileID: 8300000, guid: fa92e845695ba4baaa6614bf18e7e6e0, type: 3}
+  short_fart_1: {fileID: 0}
+  short_fart_2: {fileID: 0}
+  short_fart_3: {fileID: 0}
   long_fart: {fileID: 8300000, guid: 71c2b36ecb39149aba18b134ebfa3079, type: 3}
   walls_layer:
     serializedVersion: 2
@@ -3144,7 +3148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1820021942
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3174,8 +3178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .416397244, g: .45588237, b: .0469290577, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 69ef2511e069de142967144fd348bed9, type: 3}
+  m_Color: {r: .807843149, g: .807843149, b: .0431372561, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8e2103a61de71414b857ebda8e920831, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
