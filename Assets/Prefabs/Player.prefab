@@ -91,7 +91,9 @@ MonoBehaviour:
   guards_layer:
     serializedVersion: 2
     m_Bits: 512
-  short_fart: {fileID: 8300000, guid: fa92e845695ba4baaa6614bf18e7e6e0, type: 3}
+  short_fart_1: {fileID: 8300000, guid: fa92e845695ba4baaa6614bf18e7e6e0, type: 3}
+  short_fart_2: {fileID: 8300000, guid: 9b026f74a363e3e49b94d7c5310fb07e, type: 3}
+  short_fart_3: {fileID: 8300000, guid: 575ed61b262a50740b2b2d90d5f7cbeb, type: 3}
   long_fart: {fileID: 8300000, guid: 71c2b36ecb39149aba18b134ebfa3079, type: 3}
   walls_layer:
     serializedVersion: 2
@@ -110,8 +112,8 @@ MonoBehaviour:
   controller: {fileID: 14385296}
   maxSpeed: 5
   acceleration: 20
-  character_transform: {fileID: 0}
   anim: {fileID: 9585296}
+  start_position: {fileID: 0}
 --- !u!143 &14385296
 CharacterController:
   m_ObjectHideFlags: 1
