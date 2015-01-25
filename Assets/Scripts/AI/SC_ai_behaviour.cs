@@ -113,11 +113,16 @@ public class SC_ai_behaviour : MonoBehaviour {
 			{
 				_nav_mesh_agent.destination = _ai_sight._V3_last_player_position_in_sight;
 				if (Vector2.Distance(new Vector2(_T_ai.position.x, _T_ai.position.z), new Vector2(_nav_mesh_agent.destination.x, _nav_mesh_agent.destination.z)) < 1.25f)
-
+				{
 					Debug.Log("PLAYER CAUGHT !!!!");
+					Character_controller.resetPosition();
+				}
 			}
 			else
-				SetCheck(_nav_mesh_agent.destination = _ai_sight._V3_last_player_position_in_sight);
+			{
+				_current_state = AIState.GoCheck;
+				_nav_mesh_agent.destination = _ai_sight._V3_last_player_position_in_sight;
+			}
 			break;
 		}
 
@@ -150,6 +155,7 @@ public class SC_ai_behaviour : MonoBehaviour {
 
 	public void SetCheck(Vector3 V3_position_to_check)
 	{
+		if (_current_state != AIState.Chase)
 		_current_state = AIState.GoCheck;
 		_nav_mesh_agent.destination = V3_position_to_check;
 	}
