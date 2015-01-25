@@ -16196,11 +16196,6 @@ MonoBehaviour:
   _T_way_points:
   - {fileID: 647498603}
   - {fileID: 609361231}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _b_show_patrol_in_editor: 1
 --- !u!1 &801508393
 GameObject:
@@ -16364,11 +16359,6 @@ MonoBehaviour:
   _T_way_points:
   - {fileID: 1317147776}
   - {fileID: 162794000}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _b_show_patrol_in_editor: 1
 --- !u!1 &811573753
 GameObject:
@@ -30616,11 +30606,6 @@ MonoBehaviour:
   _T_way_points:
   - {fileID: 1851819213}
   - {fileID: 1783205912}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _b_show_patrol_in_editor: 1
 --- !u!1 &1495728483
 GameObject:

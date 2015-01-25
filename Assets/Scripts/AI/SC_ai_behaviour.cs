@@ -73,7 +73,6 @@ public class SC_ai_behaviour : MonoBehaviour {
 					_f_wait_current_angle_offset = _f_wait_angle_offset_max * 0.5f;
 					_b_wait_rotation_direction = false;
 				}
-
 			}
 			else
 			{
@@ -93,7 +92,7 @@ public class SC_ai_behaviour : MonoBehaviour {
 			break;
 
 		case AIState.GoCheck:
-			if (Vector2.Distance(new Vector2(_T_ai.position.x, _T_ai.position.z), new Vector2(_nav_mesh_agent.destination.x, _nav_mesh_agent.destination.z)) < 0.25f)
+			if (Vector2.Distance(new Vector2(_T_ai.position.x, _T_ai.position.z), new Vector2(_nav_mesh_agent.destination.x, _nav_mesh_agent.destination.z)) < 1.25f)
 				SetLookAround();
 			break;
 

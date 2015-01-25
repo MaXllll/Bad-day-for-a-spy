@@ -30,8 +30,12 @@ public class SC_patrol_way : MonoBehaviour {
 			Gizmos.color = Color.green;
 			for(int i = 0; i < _T_way_points.Length; ++i)
 			{
-				Gizmos.DrawSphere(_T_way_points[i].position, 0.5f);
-				Gizmos.DrawLine(_T_way_points[i].position, _T_way_points[GetNextIndex(i)].position);
+				if (_T_way_points[i] != null)
+				{
+					Gizmos.DrawSphere(_T_way_points[i].position, 0.5f);
+					if (_T_way_points[GetNextIndex(i)] != null)
+						Gizmos.DrawLine(_T_way_points[i].position, _T_way_points[GetNextIndex(i)].position);
+				}
 			}
 		}
 	}
