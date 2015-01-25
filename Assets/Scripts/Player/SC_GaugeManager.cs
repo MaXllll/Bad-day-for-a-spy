@@ -55,7 +55,7 @@ public class SC_GaugeManager : MonoBehaviour {
 	public void ChangeFartValue(){
 		if (!b_isInShadow && f_fartProbability < i_max) {
 			f_fartProbability += f_inc_fart;
-			f_fartProbability += f_stressValue/10000;
+			f_fartProbability += f_stressValue/1000;
 			if(f_fartProbability > i_max) f_fartProbability = i_max;
 			img_fartBar.rectTransform.sizeDelta = new Vector2(img_fartBar.rectTransform.rect.width,f_fartProbability);
 		} /*else if(b_isInShadow && f_fartProbability > 0){
@@ -70,9 +70,9 @@ public class SC_GaugeManager : MonoBehaviour {
 	public void CalculateFart(){
 		float dice_roll = Random.value * 100;
 		Debug.Log (dice_roll);
-		if (dice_roll < f_fartProbability) {
+		if ( f_fartProbability > 25 && dice_roll < f_fartProbability) {
 			player.GetComponent<Fart_manager>().fart(10,3,1);
-			f_fartProbability /= 2;
+			f_fartProbability = 0;
 			img_fartBar.rectTransform.sizeDelta = new Vector2(img_fartBar.rectTransform.rect.width,f_fartProbability);
 		}
 	}
