@@ -6,6 +6,9 @@ Obj/
 UnityGenerated/
 Library/
 Assets/AssetStoreTools*
+Client/
+Client_Data/
+Client.exe
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #

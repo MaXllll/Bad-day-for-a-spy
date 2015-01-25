@@ -34,24 +34,21 @@ public class Character_controller : MonoBehaviour
 				
 
 				Vector3 input = Vector3.zero;
-				if (Input.GetKey (KeyCode.Z)) {
+				if (Input.GetKey (KeyCode.Z) || Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
 						input.z += 1;
 				}
-				if (Input.GetKey (KeyCode.S)) {
+				if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) {
 						input.z -= 1;
 				}
-				if (Input.GetKey (KeyCode.Q)) {
+				if (Input.GetKey (KeyCode.Q) || Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
 						input.x -= 1;
 				}
-				if (Input.GetKey (KeyCode.D)) {
+				if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
 						input.x += 1;
-				}
-				if (Input.GetKey (KeyCode.R)) {
-						resetPosition ();
 				}
 
 				
-			transform.position = new Vector3(transform.position.x, 0.3f,transform.position.z);
+				transform.position = new Vector3 (transform.position.x, 0.3f, transform.position.z);
 						
 				input = input.normalized;
 				velocity = Vector3.MoveTowards (velocity, input * maxSpeed, acceleration * Time.deltaTime);

@@ -30,12 +30,12 @@ public class Fart_manager : MonoBehaviour
 	
 		void Update ()
 		{
-				if (Input.GetKeyDown (KeyCode.Space)) {
+				/*if (Input.GetKeyDown (KeyCode.Space)) {
 						fart (10, 5, 1);
 				}
 				if (Input.GetKeyDown (KeyCode.C)) {
 						fart_long (7, 2, 0);
-				}
+				}*/
 		}
 
 		public void fart (int loud_level, int duration, int volume)
