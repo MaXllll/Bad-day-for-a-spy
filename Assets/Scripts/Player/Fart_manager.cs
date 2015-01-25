@@ -14,7 +14,15 @@ public class Fart_manager : MonoBehaviour
 				guards_layer;
 		[SerializeField]
 		private AudioClip
-				short_fart;
+				short_fart_1;
+
+		[SerializeField]
+		private AudioClip short_fart_2;
+
+		[SerializeField]
+		private AudioClip short_fart_3;
+
+
 		[SerializeField]
 		private AudioClip
 				long_fart;
@@ -35,7 +43,18 @@ public class Fart_manager : MonoBehaviour
 		public void fart (int loud_level, int duration, int volume)
 		{
 				if (loud_level != 0) {
-						Sound (loud_level, short_fart);
+						switch(Random.Range(0,2))
+						{
+							case 0 : Sound (loud_level, short_fart_1);
+								break;
+							case 1 : Sound (loud_level, short_fart_2);
+								break;
+							case 2 : Sound (loud_level, short_fart_3);
+								break;
+							default : Sound (loud_level, short_fart_1);
+								break;
+
+						}
 				}
 				GameObject go = (GameObject)Instantiate (fart_prefab, transform.position, Quaternion.identity);
 				SC_fart sc_fart = go.GetComponent<SC_fart> ();

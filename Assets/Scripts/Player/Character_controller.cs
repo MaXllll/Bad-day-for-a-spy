@@ -31,6 +31,8 @@ public class Character_controller : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
+				
+
 				Vector3 input = Vector3.zero;
 				if (Input.GetKey (KeyCode.Z)) {
 						input.z += 1;
@@ -48,6 +50,8 @@ public class Character_controller : MonoBehaviour
 						resetPosition ();
 				}
 
+				
+			transform.position = new Vector3(transform.position.x, 0.3f,transform.position.z);
 						
 				input = input.normalized;
 				velocity = Vector3.MoveTowards (velocity, input * maxSpeed, acceleration * Time.deltaTime);
