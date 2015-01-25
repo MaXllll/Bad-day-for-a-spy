@@ -13,19 +13,19 @@ public class Character_controller : MonoBehaviour
 		private float
 				acceleration;
 		[SerializeField]
-		private Transform
-				character_transform;
-		[SerializeField]
 		private Animator
 				anim;
+		[SerializeField]
+		private GameObject
+				start_position;
 		private Vector3 velocity = Vector3.zero;
-	
+		static public Character_controller characte_controller;
 
 
 		// Use this for initialization
 		void Start ()
 		{
-	
+			
 		}
 	
 		// Update is called once per frame
@@ -44,6 +44,9 @@ public class Character_controller : MonoBehaviour
 				if (Input.GetKey (KeyCode.D)) {
 						input.x += 1;
 				}
+				if (Input.GetKey (KeyCode.R)) {
+						resetPosition ();
+				}
 
 						
 				input = input.normalized;
@@ -55,5 +58,12 @@ public class Character_controller : MonoBehaviour
 				} else {
 						anim.SetBool ("Walk", false);
 				}
+				Debug.Log ("Player position :" + transform.position);
+				//transform.position = new Vector3 (0, 0, 0);
+		}
+
+		public static void resetPosition ()
+		{
+				Application.LoadLevel (Application.loadedLevel);
 		}
 }
