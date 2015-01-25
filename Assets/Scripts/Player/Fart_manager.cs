@@ -15,14 +15,12 @@ public class Fart_manager : MonoBehaviour
 		[SerializeField]
 		private AudioClip
 				short_fart_1;
-
 		[SerializeField]
-		private AudioClip short_fart_2;
-
+		private AudioClip
+				short_fart_2;
 		[SerializeField]
-		private AudioClip short_fart_3;
-
-
+		private AudioClip
+				short_fart_3;
 		[SerializeField]
 		private AudioClip
 				long_fart;
@@ -36,22 +34,25 @@ public class Fart_manager : MonoBehaviour
 						fart (10, 5, 1);
 				}
 				if (Input.GetKeyDown (KeyCode.C)) {
-						StartCoroutine (fart_long (7, 2, 0));
+						fart_long (7, 2, 0);
 				}
 		}
 
 		public void fart (int loud_level, int duration, int volume)
 		{
 				if (loud_level != 0) {
-						switch(Random.Range(0,2))
-						{
-							case 0 : Sound (loud_level, short_fart_1);
+						switch (Random.Range (0, 2)) {
+						case 0:
+								Sound (loud_level, short_fart_1);
 								break;
-							case 1 : Sound (loud_level, short_fart_2);
+						case 1:
+								Sound (loud_level, short_fart_2);
 								break;
-							case 2 : Sound (loud_level, short_fart_3);
+						case 2:
+								Sound (loud_level, short_fart_3);
 								break;
-							default : Sound (loud_level, short_fart_1);
+						default :
+								Sound (loud_level, short_fart_1);
 								break;
 
 						}
@@ -61,8 +62,9 @@ public class Fart_manager : MonoBehaviour
 				sc_fart.StartCoroutine (sc_fart.Fart (volume, duration));
 		}
 
-		public IEnumerator fart_long (int loud_level, int duration, int volume)
+		private IEnumerator fart_long_co (int loud_level, int duration, int volume)
 		{	
+				Debug.Log ("BLAAZAZZAZAZ FART LONG");
 				float time = 0f;
 				if (loud_level != 0) {
 						Sound (loud_level, long_fart);
@@ -76,6 +78,11 @@ public class Fart_manager : MonoBehaviour
 						
 						yield return new WaitForSeconds (step_fart_long);
 				}
+		}
+
+		public void fart_long (int loud_level, int duration, int volume)
+		{
+				StartCoroutine (fart_long_co (7, 2, 0));
 		}
 
 		private void Sound (int loud_level, AudioClip clip)

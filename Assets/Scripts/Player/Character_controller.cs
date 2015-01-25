@@ -62,7 +62,6 @@ public class Character_controller : MonoBehaviour
 				} else {
 						anim.SetBool ("Walk", false);
 				}
-				Debug.Log ("Player position :" + transform.position);
 				//transform.position = new Vector3 (0, 0, 0);
 		}
 
