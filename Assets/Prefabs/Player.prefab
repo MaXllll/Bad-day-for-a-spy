@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 485294}
   - 143: {fileID: 14385296}
   - 114: {fileID: 11485296}
+  - 114: {fileID: 11400000}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -41,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.72000003, y: .5, z: 2.6500001}
+  m_LocalPosition: {x: .550000012, y: .200000003, z: -24.3400002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 485296}
@@ -74,6 +75,27 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c590898a4fa714d2f954c6b7a0364c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fart_prefab: {fileID: 100038, guid: fddb6e5fb3dae1f46b08bc5e3a805891, type: 2}
+  step_fart_long: .5
+  guards_layer:
+    serializedVersion: 2
+    m_Bits: 512
+  short_fart: {fileID: 8300000, guid: fa92e845695ba4baaa6614bf18e7e6e0, type: 3}
+  long_fart: {fileID: 8300000, guid: 71c2b36ecb39149aba18b134ebfa3079, type: 3}
+  walls_layer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!114 &11485296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,7 +110,7 @@ MonoBehaviour:
   controller: {fileID: 14385296}
   maxSpeed: 5
   acceleration: 20
-  transform: {fileID: 485294}
+  character_transform: {fileID: 0}
   anim: {fileID: 9585296}
 --- !u!143 &14385296
 CharacterController:

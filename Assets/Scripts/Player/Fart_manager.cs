@@ -18,20 +18,25 @@ public class Fart_manager : MonoBehaviour
 		[SerializeField]
 		private AudioClip
 				long_fart;
+		[SerializeField]
+		private LayerMask
+				walls_layer;
 	
 		void Update ()
 		{
 				if (Input.GetKeyDown (KeyCode.Space)) {
-						fart (3, 5, 1);
+						fart (10, 5, 1);
 				}
 				if (Input.GetKeyDown (KeyCode.C)) {
-						StartCoroutine (fart_long (5, 2, 0));
+						StartCoroutine (fart_long (7, 2, 0));
 				}
 		}
 
 		public void fart (int loud_level, int duration, int volume)
 		{
-				Sound (loud_level, short_fart);
+				if (loud_level != 0) {
+						Sound (loud_level, short_fart);
+				}
 				GameObject go = (GameObject)Instantiate (fart_prefab, transform.position, Quaternion.identity);
 				SC_fart sc_fart = go.GetComponent<SC_fart> ();
 				sc_fart.StartCoroutine (sc_fart.Fart (volume, duration));
@@ -40,7 +45,9 @@ public class Fart_manager : MonoBehaviour
 		public IEnumerator fart_long (int loud_level, int duration, int volume)
 		{	
 				float time = 0f;
-				Sound (loud_level, long_fart);
+				if (loud_level != 0) {
+						Sound (loud_level, long_fart);
+				}
 				while (time < duration) {
 						GameObject go = (GameObject)Instantiate (fart_prefab, transform.position, Quaternion.identity);
 						SC_fart sc_fart = go.GetComponent<SC_fart> ();
@@ -56,12 +63,17 @@ public class Fart_manager : MonoBehaviour
 		{
 
 				AudioSource.PlayClipAtPoint (clip, Vector3.zero);
-				
-				Collider[] proximity_guards = Physics.OverlapSphere (transform.position, loud_level, guards_layer);
 
+				Collider[] proximity_guards = Physics.OverlapSphere (transform.position, loud_level, guards_layer);
+				Debug.Log (proximity_guards.Length);
 				for (int i= 0; i < proximity_guards.Length; ++i) {
-						proximity_guards [i].GetComponent<SC_ai_behaviour> ().SetCheck (transform.position);
-						
+						Vector3 V3_collider_direction = proximity_guards [i].transform.position - transform.position;
+						Debug.Log (proximity_guards [i].transform.position + " - " + transform.position);
+						RaycastHit _hit;
+						if (!Physics.Raycast (transform.position, V3_collider_direction, out _hit, loud_level, walls_layer)) {
+								Debug.Log ("No wall");
+								proximity_guards [i].GetComponent<SC_ai_behaviour> ().SetCheck (transform.position);
+						}
 				}
 		}
 }
