@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 11400000}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
