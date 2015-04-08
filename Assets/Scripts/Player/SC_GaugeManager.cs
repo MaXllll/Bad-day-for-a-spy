@@ -21,11 +21,11 @@ public class SC_GaugeManager : MonoBehaviour
 
 		[SerializeField]
 		//private float f_inc_stress = 0.3f or 0.2f;
-		private float f_inc_stress;
+		private float f_inc_stress = 0.6f;
 		private float f_dec_stress = 0.6f;
 		[SerializeField]
 		//private float f_inc_fart = 0.06f or 0.03f;
-		private float f_inc_fart;
+		private float f_inc_fart = 0.2f;
 
 		private int i_max = 100;
 		private int i_min = 10;

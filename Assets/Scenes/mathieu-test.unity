@@ -3165,6 +3165,8 @@ MonoBehaviour:
   img_stressBar: {fileID: 1884287686}
   img_fartBar: {fileID: 725514599}
   player: {fileID: 1727734107}
+  f_inc_stress: .300000012
+  f_inc_fart: .0500000007
 --- !u!114 &1727734113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3322,7 +3324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ai_behaviour: {fileID: 457081060}
   _f_sight_distance: 5
-  _f_sight_angle: 120
+  _f_sight_angle: 105
   _layer_mask:
     serializedVersion: 2
     m_Bits: 1280
